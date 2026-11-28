@@ -164,6 +164,10 @@ section{position:relative}
 .connect-btn:hover{transform:scale(1.04) rotate(-1deg)}
 .connect-btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1.5px solid var(--line);color:var(--ink);font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:15px 22px;border-radius:999px;min-height:58px;transition:border-color .3s,color .3s,background .3s}
 .connect-btn-ghost:hover{border-color:var(--accent);color:var(--accent-text)}
+.hero-cta-group{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.dl-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid var(--gold);color:var(--accent-text);background:transparent;font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:15px 22px;border-radius:999px;min-height:58px;line-height:1.25;text-align:center;transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease)}
+.dl-btn:hover{background:var(--gold);color:#0A0A0A;border-color:var(--gold);transform:translateY(-2px)}
+.dl-btn-contact{color:#F5D67B}
 .connect-note{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.06em;color:var(--muted);line-height:1.6}
 .connect-note a{text-decoration:underline;text-underline-offset:4px;color:var(--ink);font-weight:700}
 
@@ -735,6 +739,21 @@ img.ph-new{filter:none!important}
 .pricing-line .pl-label{color:var(--accent-text);font-weight:700;letter-spacing:.14em}
 .pricing-line b{color:var(--ink)}
 .pricing-line .pl-free{color:var(--accent-text);font-weight:700}
+/* ===== EVERYTHING WE CAN DO ===== */
+#capabilities{padding:70px 0 90px;background:var(--bg);border-top:1.5px solid var(--line-soft)}
+#capabilities .sec-head{border-top-color:var(--gold-deep)}
+.cap-title{font-size:clamp(2.8rem,8.5vw,7.8rem);padding:8px 0 4px}
+.cap-sub{max-width:62ch;line-height:1.7;color:var(--muted);margin:10px 0 6px;font-weight:500;font-size:clamp(16px,1.6vw,19px)}
+.cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px;align-items:stretch}
+.cap-card{background:var(--glass-strong);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:var(--shadow);overflow:hidden;position:relative;display:flex;flex-direction:column;transition:transform .35s var(--ease),border-color .3s}
+.cap-card:hover{transform:translateY(-5px);border-color:var(--gold)}
+.cap-card .cap-num{font-family:"Anton",sans-serif;font-size:clamp(2.4rem,3.6vw,3.4rem);line-height:1;color:transparent;-webkit-text-stroke:1.8px var(--accent-text);display:block;margin-bottom:20px}
+.cap-card h3{font-family:"Anton",sans-serif;font-weight:400;text-transform:uppercase;line-height:1.05;font-size:clamp(1.25rem,1.9vw,1.65rem)}
+.cap-card p{color:var(--muted);line-height:1.65;margin-top:10px;font-size:14.5px;font-weight:500}
+.cap-cta{margin-top:38px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center}
+.cap-cta p{font-size:clamp(16px,1.8vw,20px);font-weight:600;max-width:62ch;line-height:1.6}
+@media(max-width:1100px){.cap-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.cap-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -815,7 +834,10 @@ img.ph-new{filter:none!important}
         <p class="hero-intro">I design <b>interfaces people can touch</b>, build code that actually runs, and cut stories that move. One mind — <b>design, build, create</b> — from Malaybalay City.</p>
         <p class="offer-banner" data-reveal><span>3D social media posts that pop out of the frame — <b>from $10</b> · <b>First sample FREE</b> · Video editing from <b>$5/hr</b></span><a href="#contact" data-hover>Start a project →</a></p>
       </div>
-      <span class="magnetic-wrap"><a class="cta-circle magnetic" href="#contact" data-hover><span class="arr">↓</span><span>Let's<br />work</span></a></span>
+      <div class="hero-cta-group">
+        <span class="magnetic-wrap"><a class="cta-circle magnetic" href="#contact" data-hover><span class="arr">↓</span><span>Let's<br />work</span></a></span>
+        <a class="dl-btn" href="portfolio.pdf" download data-hover>Download Portfolio (PDF) ↓</a>
+      </div>
     </div>
     <div class="hero-portrait-row">
       <figure class="portrait-card" id="tiltCard">
@@ -972,6 +994,61 @@ img.ph-new{filter:none!important}
   </div>
   <div class="wrap">
     <p class="pricing-line" data-reveal><span class="pl-label">Pricing</span><span>3D Post — <b>from $10</b></span><span>3 Posts — <b>$25</b></span><span>6 Posts — <b>$50</b></span><span>Video Editing — <b>$5/hr</b></span><span class="pl-free">First sample piece FREE</span></p>
+  </div>
+</section>
+
+<!-- ================= EVERYTHING WE CAN DO ================= -->
+<section id="capabilities">
+  <div class="wrap">
+    <div class="sec-head"><span class="dot"></span><span data-scramble>Everything we can do</span><span class="sp"></span><span>Capabilities</span></div>
+    <h2 class="h-display cap-title split-title" data-reveal>Everything we<br /><span class="serif-accent grad-text">can do for you</span></h2>
+    <p class="cap-sub" data-reveal>One team — design, video, web and content, done together and delivered ready to use.</p>
+    <div class="cap-grid">
+      <article class="cap-card" data-reveal>
+        <span class="cap-num">01</span>
+        <h3>Modern Websites</h3>
+        <p>Award-standard business websites — clean, fast, mobile-first, built to get enquiries and sales.</p>
+      </article>
+      <article class="cap-card" data-reveal>
+        <span class="cap-num">02</span>
+        <h3>3D Social Media Posts</h3>
+        <p>Posts that pop out of the frame — from $10, first sample FREE.</p>
+      </article>
+      <article class="cap-card" data-reveal>
+        <span class="cap-num">03</span>
+        <h3>Short-Form Video Editing</h3>
+        <p>Reels, TikTok &amp; Shorts in CapCut — hooks, captions, trending formats, $5/hr.</p>
+      </article>
+      <article class="cap-card" data-reveal>
+        <span class="cap-num">04</span>
+        <h3>AI Story Videos</h3>
+        <p>60-second story videos with one narrator voice — ready to upload with title, description &amp; hashtags.</p>
+      </article>
+      <article class="cap-card" data-reveal>
+        <span class="cap-num">05</span>
+        <h3>Thumbnails &amp; Covers</h3>
+        <p>Click-worthy thumbnails and covers designed to stop the scroll.</p>
+      </article>
+      <article class="cap-card" data-reveal>
+        <span class="cap-num">06</span>
+        <h3>Content Planning</h3>
+        <p>7-day and monthly content calendars, captions &amp; hashtag sets written for every post.</p>
+      </article>
+      <article class="cap-card" data-reveal>
+        <span class="cap-num">07</span>
+        <h3>UI Design in Figma</h3>
+        <p>Clean app &amp; system interfaces, components and flows, screen by screen.</p>
+      </article>
+      <article class="cap-card" data-reveal>
+        <span class="cap-num">08</span>
+        <h3>Website Fix &amp; Redesign</h3>
+        <p>Old or weak website? We rebuild it modern first — you only pay if you love it.</p>
+      </article>
+    </div>
+    <div class="cap-cta" data-reveal>
+      <p>Don&rsquo;t see it here? Ask — if it can be designed, edited or built on a screen, we can probably do it together.</p>
+      <a class="connect-btn" href="#contact" data-hover>Start a project</a>
+    </div>
   </div>
 </section>
 
@@ -1180,8 +1257,28 @@ img.ph-new{filter:none!important}
     </div>
       <svg id="radarSvg" viewBox="0 0 360 320" role="img" aria-label="Radar chart of Jehoiakim Luna skills"></svg>
     </div>
+    <div class="skill-row" data-hover data-cat="design" tabindex="0" role="button" aria-label="3D Social Media Design details">
+      <span class="s-idx">/ 09</span><h3 class="s-name">3D Social Media Design</h3><span class="s-pct"><span data-count="90">0</span>%</span>
+      <p class="s-meta">3D posts · Pop-out designs · Brand visuals — tap for detail</p>
+      <div class="bar"><i data-bar="90"></i></div><p class="skill-detail">My signature service: 3D social media posts that pop out of the frame — real depth, bold type, and product shots that stop the scroll, like the Breathe Café sample in my work.</p>
+    </div>
+    <div class="skill-row" data-hover data-cat="design" tabindex="0" role="button" aria-label="Thumbnail Design details">
+      <span class="s-idx">/ 10</span><h3 class="s-name">Thumbnail Design</h3><span class="s-pct"><span data-count="85">0</span>%</span>
+      <p class="s-meta">Thumbnails · Covers · Click-worthy art — tap for detail</p>
+      <div class="bar"><i data-bar="85"></i></div><p class="skill-detail">Click-worthy thumbnails and covers — big readable type, strong contrast, and one clear focal point that earns the tap even at small sizes.</p>
+    </div>
+    <div class="skill-row" data-hover data-cat="design video" tabindex="0" role="button" aria-label="Content Planning details">
+      <span class="s-idx">/ 11</span><h3 class="s-name">Content Planning</h3><span class="s-pct"><span data-count="85">0</span>%</span>
+      <p class="s-meta">Calendars · Captions · Hashtag sets — tap for detail</p>
+      <div class="bar"><i data-bar="85"></i></div><p class="skill-detail">Content calendars, captions and hashtag sets planned ahead — so a page posts consistently with a voice, not random one-offs.</p>
+    </div>
+    <div class="skill-row" data-hover data-cat="code design" tabindex="0" role="button" aria-label="Web Design and Building details">
+      <span class="s-idx">/ 12</span><h3 class="s-name">Web Design &amp; Building</h3><span class="s-pct"><span data-count="80">0</span>%</span>
+      <p class="s-meta">Business websites · HTML/CSS/JS · GitHub Pages — tap for detail</p>
+      <div class="bar"><i data-bar="80"></i></div><p class="skill-detail">Modern business websites designed and built end to end — HTML, CSS and JavaScript, deployed live on GitHub Pages. This portfolio is one of them.</p>
+    </div>
     <div class="tools-line" data-reveal aria-label="Tools I use">
-      <span>Figma</span><span>Java</span><span>Eclipse</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>C (Basic)</span><span>AI Video Tools</span><span>CapCut</span><span>Video Editing</span><span>Canva</span>
+      <span>Figma</span><span>CapCut</span><span>Canva</span><span>AI Image &amp; Video Tools</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Java</span><span>Eclipse</span><span>C (Basic)</span><span>GitHub Pages</span><span>Google Workspace</span><span>Video Editing</span>
     </div>
   </div>
 </section>
@@ -1269,6 +1366,7 @@ img.ph-new{filter:none!important}
       <a class="gh-btn magnetic" href="https://github.com/jezerrlunz" target="_blank" rel="noopener" data-hover><span class="gh-ic">GH</span> GitHub ↗</a>
       <a class="ig-btn magnetic" href="https://www.instagram.com/jezeerrlunaaa01/" target="_blank" rel="noopener" data-hover><span class="ig-ic">IG</span> Instagram ↗</a>
       <button class="copy-btn" id="copyBtn" data-hover aria-label="Copy email address">Copy email</button>
+      <a class="dl-btn dl-btn-contact" href="portfolio.pdf" download data-hover>Download Portfolio (PDF) ↓</a>
     </div>
     <p class="alt-mail" style="margin-bottom:10px">Facebook — <a href="https://www.facebook.com/jehoia" target="_blank" rel="noopener" data-hover>facebook.com/jehoia · Jehoiakim Jezer M. Luna (@jehoia)</a></p>
     <p class="alt-mail" style="margin-bottom:10px">LinkedIn — <a href="https://www.linkedin.com/in/jehoiakim-jezer-luna-0b137b451/" target="_blank" rel="noopener" data-hover>linkedin.com/in/jehoiakim-jezer-luna-0b137b451</a></p>
